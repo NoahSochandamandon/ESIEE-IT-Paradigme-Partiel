@@ -6,8 +6,8 @@ public class Principale {
 
     ArrayList<Personne> personnes = new ArrayList<>(); 
 
-    Personne noah = new Membre("Noah", "Sochand", 0, new Date(), "Super cool");
-    Personne maxime = new Membre("Maxime", "Boussin", 1, new Date(), "Pas cool");
+    Membre noah = new Membre("Noah", "Sochand", 0, new Date(), "Super cool");
+    Membre maxime = new Membre("Maxime", "Boussin", 1, new Date(), "Pas cool");
 
     Personne issam = new Employe("Issam", "Complexe", 2, "Arabe", 1);
     Personne krim = new Employe("Krim", "Dur", 3, "Arabe", 2);
@@ -35,6 +35,13 @@ public class Principale {
     livres.add(hp4);
     livres.add(hp5);
 
+    noah.emprunter(livres.get(0));
+    noah.emprunter(livres.get(3));
 
+    noah.afficherDetails();
+
+    noah.retourner(hp1);
+    noah.retourner(hp5);
+    
   }
 }

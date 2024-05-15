@@ -17,6 +17,7 @@ public class Membre extends Personne {
     if (livre.getDisponible()) {
       livre.emprunter();
       emprunts.add(livre);
+      System.out.println("Vous empruntez le livre");
     } else {
       System.out.println("Livre indisponible");
     }
@@ -26,6 +27,7 @@ public class Membre extends Personne {
     if (emprunts.contains(livre)) {
       livre.retourner();
       emprunts.remove(livre);
+      System.out.println("Vous rendez le livre");
     } else {
       System.out.println("vous n'avez pas emprunter ce livre");
     }
@@ -38,6 +40,10 @@ public class Membre extends Personne {
     System.out.println("ID : "+ this.id);
     System.out.println("Date adhesion : "+ this.dateAdhesion);
     System.out.println("Statut : "+ this.statut);
+    System.out.println("Liste des livres emprunter : ");
+    for (Livre emprunt: emprunts) {
+      emprunt.afficherDetails();
+    }
     System.out.println("----------------");
   }
 }
