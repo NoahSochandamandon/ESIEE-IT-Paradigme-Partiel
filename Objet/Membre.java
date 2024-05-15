@@ -18,5 +18,4 @@ public class Membre extends Personne {
     System.out.println("Statut : "+ this.statut);
     System.out.println("----------------");
   }
-
 }
