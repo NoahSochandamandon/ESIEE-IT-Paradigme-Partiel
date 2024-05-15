@@ -17,8 +17,24 @@ public class Principale {
     personnes.add(issam);
     personnes.add(krim);
 
-    for (Personne personne: personnes) {
-      personne.afficherDetails();
-    }
+    // for (Personne personne: personnes) {
+    //   personne.afficherDetails();
+    // }
+
+    ArrayList<Livre> livres = new ArrayList<>();
+
+    Livre hp1 = new Livre("Harry Potter 1", "JKR", "11", true);
+    Livre hp2 = new Livre("Harry Potter 2", "JKR", "12", true);
+    Livre hp3 = new Livre("Harry Potter 3", "JKR", "13", false);
+    Livre hp4 = new Livre("Harry Potter 4", "JKR", "14", false);
+    Livre hp5 = new Livre("Harry Potter 5", "JKR", "15", true);
+
+    livres.add(hp1);
+    livres.add(hp2);
+    livres.add(hp3);
+    livres.add(hp4);
+    livres.add(hp5);
+
+
   }
 }
