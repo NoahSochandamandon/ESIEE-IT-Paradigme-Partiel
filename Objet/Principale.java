@@ -4,7 +4,7 @@ import java.util.Date;
 public class Principale {
   public static void main(String[] args) {
 
-    ArrayList<Personne> personnes = new ArrayList<>(); 
+    ArrayList<Personne> personnes = new ArrayList<>();
 
     Membre noah = new Membre("Noah", "Sochand", 0, new Date(), "Super cool");
     Membre maxime = new Membre("Maxime", "Boussin", 1, new Date(), "Pas cool");
@@ -17,9 +17,12 @@ public class Principale {
     personnes.add(issam);
     personnes.add(krim);
 
-    // for (Personne personne: personnes) {
-    //   personne.afficherDetails();
-    // }
+    System.out.println(
+        "****************************************************************************************************\nTEST PARTIE 1 \n****************************************************************************************************");
+
+    for (Personne personne : personnes) {
+      personne.afficherDetails();
+    }
 
     ArrayList<Livre> livres = new ArrayList<>();
 
@@ -35,6 +38,9 @@ public class Principale {
     livres.add(hp4);
     livres.add(hp5);
 
+    System.out.println(
+        "****************************************************************************************************\nTEST PARTIE 2 \n****************************************************************************************************");
+
     noah.emprunter(livres.get(0));
     noah.emprunter(livres.get(3));
 
@@ -42,6 +48,6 @@ public class Principale {
 
     noah.retourner(hp1);
     noah.retourner(hp5);
-    
+
   }
 }

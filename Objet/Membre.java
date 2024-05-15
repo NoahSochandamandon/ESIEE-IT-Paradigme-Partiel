@@ -38,7 +38,7 @@ public class Membre extends Personne {
     System.out.println("Prenom : "+ this.prenom);
     System.out.println("Nom : "+ this.nom);
     System.out.println("ID : "+ this.id);
-    System.out.println("Date adhesion : "+ this.dateAdhesion);
+    System.out.println("Date adhesion : "+ this.dateAdhesion.toString());
     System.out.println("Statut : "+ this.statut);
     System.out.println("Liste des livres emprunter : ");
     for (Livre emprunt: emprunts) {
