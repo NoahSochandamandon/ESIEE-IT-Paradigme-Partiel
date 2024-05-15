@@ -1,9 +1,11 @@
+import java.util.Date;
+
 public class Membre extends Personne {
   
-  protected String dateAdhesion;
+  protected Date dateAdhesion;
   protected String statut;
 
-  public Membre(String prenom, String nom, int id, String dateAdhesion, String statut) {
+  public Membre(String prenom, String nom, int id, Date dateAdhesion, String statut) {
     super(prenom, nom, id);
     this.dateAdhesion = dateAdhesion;
     this.statut = statut;

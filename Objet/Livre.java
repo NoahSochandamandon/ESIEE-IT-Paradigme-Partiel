@@ -49,7 +49,7 @@ public class Livre implements Empruntable {
     System.out.println("Titre : " + this.titre);
     System.out.println("isbn : " + this.isbn);
     if (disponible) {
-      System.out.println("Disponibilité : Disponible");      
+      System.out.println("Disponibilité : Disponible");
     } else {
       System.out.println("Disponibilité : non disponible");
     }
@@ -59,11 +59,16 @@ public class Livre implements Empruntable {
 
   @Override
   public void emprunter() {
-    setDisponible(false);
+    if (disponible) {
+      setDisponible(false);
+      System.out.println("Vous emprunter le livre");
+    } else {
+      System.out.println("Vous ne pouvez pas emprunter ce livre car il est déjà emprunté");
+    }
   }
 
   @Override
   public void retourner() {
-    setDisponible(true);  
+    setDisponible(true);
   }
 }
